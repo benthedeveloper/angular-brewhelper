@@ -1,0 +1,114 @@
+@import "../variables.scss";
+
+header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background-color: $headerBgColor;
+  color: $headerTextColor;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+  padding: $headerPadding;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: default;
+    padding-right: 22px;
+    position: relative;
+    width: 370px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: #fff;
+    }
+
+    .fas {
+      font-size: 88px;
+      margin-right: 20px;
+    }
+
+    .main-heading {
+      margin: 0;
+      font-size: 44px;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding-left: 20px;
+
+    a {
+      color: $headerTextColor;
+      text-decoration: none;
+    }
+
+    .main-nav-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 25px;
+
+      li {
+        margin: 10px;
+      }
+    }
+
+    .settings-bar {
+      margin-left: auto;
+      font-size: 30px;
+    }
+  }
+}
+
+main {
+  height: 100%;
+  display: flex;
+  padding-top: 140px;
+
+  .sidebar {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: $logoWidth + $headerPadding;
+
+    .sidebar-inner {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      background-color: $sidebarBgColor;
+    }
+  }
+
+  .main-section {
+    flex-grow: 1;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  header {
+    flex-wrap: wrap;
+
+    .logo {
+      width: 100%;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    nav {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

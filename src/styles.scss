@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~normalize.css';
+
+// Global styles
+html, body {
+  height: 100%;
+}
+
+// box-sizing fix
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+
+  &.bold {
+    font-weight: 700;
+  }
+
+  &.semibold {
+    font-weight: 400;
+  }
+}
+
+h1 {
+  font-size: 62px;
+}
+
+h2 {
+  font-size: 46px;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+// Screen-reader-only (invisible)
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
