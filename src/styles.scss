@@ -14,6 +14,13 @@ html {
   box-sizing: inherit;
 }
 
+// clearfix
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -80,18 +87,40 @@ main {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    width: $logoWidth + $headerPadding;
+    width: $sidebarWidth;
 
     .sidebar-inner {
       display: flex;
       flex: 1;
       flex-direction: column;
       background-color: $sidebarBgColor;
+      overflow: hidden;
     }
   }
 
   .main-section {
-    flex-grow: 1;
-    padding: 20px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: $mainSectionWidth;
+
+    .main-section-inner {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (max-width: 899px) {
+  main {
+    padding-top: 176px;
+  }
+}
+
+@media screen and (max-width: 558px) {
+  main {
+    padding-top: 188px;
   }
 }

@@ -10,4 +10,5 @@ export interface IBrew {
   fg: number;
   ibu: number;
   imageUrl: string;
+  imageAltText: string;
 }

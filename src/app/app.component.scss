@@ -6,8 +6,9 @@ header {
   width: 100%;
   background-color: $headerBgColor;
   color: $headerTextColor;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.75);
   padding: $headerPadding;
+  z-index: 1;
 
   .logo {
     display: flex;

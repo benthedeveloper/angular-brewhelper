@@ -1,0 +1,84 @@
+:host {
+  overflow-y: auto;
+}
+
+.brew-details {
+  padding: 20px 10%;
+
+  .brew-status {
+    display: inline-block;
+    float: right;
+    font-weight: 300;
+    padding: 5px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+  }
+
+  .image-name-wrapper {
+    clear: both;
+    margin: 0 -20px;
+
+    .brew-name {
+      font-size: 50px;
+      margin: 46px 0;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 20px;
+      width: calc(100% - 190px);
+    }
+
+    .brew-image {
+      float: right;
+      padding: 0 20px;
+
+      img {
+        display: block;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .brew-stats {
+    background-color: #eee;
+    color: #444;
+    margin: 20px;
+    padding: 20px;
+    font-weight: bold;
+    float: right;
+    min-width: 300px;
+
+    .brew-stats-heading {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .brew-details {
+    padding: 20px;
+
+    .image-name-wrapper {
+      .brew-name {
+        display: block;
+        width: auto;
+      }
+
+      .brew-image {
+        float: none;
+        width: 100%;
+
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .brew-stats {
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

@@ -5,4 +5,8 @@ $headerPadding: 20px;
 $logoWidth: 370px;
 
 // Sidebar
+$sidebarWidth: $logoWidth + $headerPadding;
 $sidebarBgColor: #ccc;
+
+// Main section
+$mainSectionWidth: calc(100% - #{$sidebarWidth});
