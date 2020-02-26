@@ -1,0 +1,20 @@
+<aside class="sidebar">
+  <div class="sidebar-inner">
+    <header class="brew-list-filters">
+      <input type="radio" id="filterAll" name="brewListFilters">
+      <label for="filterAll">All</label>
+      <input type="radio" id="filterBrewing" name="brewListFilters">
+      <label for="filterBrewing">Brewing</label>
+      <input type="radio" id="filterCompleted" name="brewListFilters">
+      <label for="filterCompleted">Completed</label>
+      <input type="radio" id="filterNotStarted" name="brewListFilters">
+      <label for="filterNotStarted">Not Started</label>
+    </header>
+    <app-brew-list [brews]="myBrews" [selectedBrew]="selectedBrew"></app-brew-list>
+  </div>
+</aside>
+<section class="main-section">
+  <div class="main-section-inner">
+    <app-brew-details [brew]="selectedBrew"></app-brew-details>
+  </div>
+</section>

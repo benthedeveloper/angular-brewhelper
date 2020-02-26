@@ -1,4 +1,5 @@
 @import '~normalize.css';
+@import './variables.scss';
 
 // Global styles
 html, body {
@@ -11,6 +12,13 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+// clearfix
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 body {
@@ -68,4 +76,51 @@ h6 {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  padding-top: 140px;
+
+  .sidebar {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: $sidebarWidth;
+
+    .sidebar-inner {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      background-color: $sidebarBgColor;
+      overflow: hidden;
+    }
+  }
+
+  .main-section {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: $mainSectionWidth;
+
+    .main-section-inner {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (max-width: 899px) {
+  main {
+    padding-top: 176px;
+  }
+}
+
+@media screen and (max-width: 558px) {
+  main {
+    padding-top: 188px;
+  }
 }

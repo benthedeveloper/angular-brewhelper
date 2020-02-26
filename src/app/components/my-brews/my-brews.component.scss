@@ -1,0 +1,31 @@
+:host {
+  display: flex;
+  width: 100%;
+}
+
+.brew-list-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #696969;
+
+  label {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  input[type="radio"] {
+    display: none;
+
+    &:checked + label {
+      box-shadow: 0 0 0 1px #fff;
+      background-color: #000;
+      font-weight: bold;
+    }
+  }
+  
+}
