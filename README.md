@@ -4,6 +4,9 @@ An Angular app to help with homebrewing!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
 
+## For the demos
+Fetch all the branches, then checkout branch 01-start-my-brews-component for the start of the demos.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
