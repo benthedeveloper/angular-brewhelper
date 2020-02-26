@@ -6,17 +6,17 @@
   <nav>
     <ul class="main-nav-list">
       <li>
-        <a href="#">My Brews</a>
+        <a routerLink="/my-brews" routerLinkActive="active">My Brews</a>
       </li>
       <li>
-        <a href="#">Explore</a>
+        <a routerLink="/explore" routerLinkActive="active">Explore</a>
       </li>
       <li>
-        <a href="#">Tools</a>
+        <a routerLink="/tools" routerLinkActive="active">Tools</a>
       </li>
     </ul>
     <div class="settings-bar">
-      <a href="#">
+      <a routerLink="/settings" routerLinkActive="active">
         <i class="fas fa-cog" aria-hidden="true"></i>
         <p class="sr-only">Settings</p>
       </a>
@@ -25,12 +25,5 @@
 </header>
 
 <main>
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-      <p>Here is where the sidebar content goes</p>
-    </div>
-  </aside>
-  <section class="main-section">
-    <p>Here is where the main content goes</p>
-  </section>
+  <router-outlet></router-outlet>
 </main>

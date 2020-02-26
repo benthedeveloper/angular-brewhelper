@@ -1,0 +1,51 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.brew-list {
+  flex: 1;
+  margin: 0;
+  list-style-type: none;
+  padding: 2px;
+
+  li {
+    margin: 2px 0;
+    position: relative;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: block;
+      background-color: #eee;
+      color: #000;
+      text-decoration: none;
+      padding: 20px 10px;
+
+      &.active {
+        background-color: #fff;
+        box-shadow: 0 0 1px rgba(0,0,0,.25);
+      }
+
+      .status {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: .8rem;
+        font-weight: 300;
+      }
+
+      .name {
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<div class="brew-details" *ngIf="brew; else noBrewTemplate">
+  <div class="brew-status">{{ brew.status }}</div>
+  <div class="image-name-wrapper clearfix">
+    <div class="brew-image">
+      <img [src]="brew.imageUrl" alt="TODO - alt text for images">
+    </div>
+    <h2 class="brew-name">{{ brew.name }}</h2>
+  </div>
+  <div class="brew-description">
+    <h3>Description:</h3>
+    <p>{{ brew.description }}</p>
+  </div>
+  <div class="brew-stats">
+    <h3 class="brew-stats-heading">Brew Stats:</h3>
+    <div class="og">OG: {{ brew.og }}</div>
+    <div class="fg">FG: {{ brew.fg }}</div>
+    <div class="ibu">IBU: {{ brew.ibu }}</div>
+  </div>
+  <div class="tasting-notes">
+    <h3>Tasting Notes:</h3>
+    <p *ngIf="brew.tastingNotes; else noTastingNotesTemplate">{{ brew.tastingNotes }}</p>
+  </div>
+</div>
+
+<ng-template #noBrewTemplate>
+  <div class="brew-details">
+    <h2>No brew yet! :(</h2>
+  </div>
+</ng-template>
+
+<ng-template #noTastingNotesTemplate>
+  <p>No tasting notes yet...</p>
+</ng-template>

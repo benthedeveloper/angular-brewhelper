@@ -1,0 +1,8 @@
+<ul class="brew-list" *ngIf="brews?.length">
+  <li *ngFor="let brew of brews">
+    <a href="#" (click)="onSelect($event, brew)" [ngClass]="{'active': brew === selectedBrew}">
+      <div class="name">{{brew.name}}</div>
+      <div class="status">{{brew.status}}</div>
+    </a>
+  </li>
+</ul>
